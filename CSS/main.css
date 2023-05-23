@@ -4,17 +4,28 @@ nav{
     padding-left: 10%;
     padding-right: 10%;
     padding-top: 20px;
-    background-color: green;
-}
-
-.active{
-    color: greenyellow;
-    background-color: black;
+    background-color: transparent;
 }
 
 .logo{
-    float: left;
     color: white;
+    margin-top: -110px;
+}
+
+.logo-photo{
+    height: 300px;
+    width: 300px;
+    background-image: url("/assets/Logo.PNG");
+    background-position: center;
+    background-size: cover;
+    margin-left: 42%;
+    margin-top: -13px;
+    border-radius: 50%;
+}
+
+.active{
+    color: white;
+    text-decoration-line: overline;
 }
 
 nav ul{
@@ -29,14 +40,28 @@ nav li{
     padding-top: 5px;
     float: right;
     margin-left: 5px;
+    margin-top: -30px;
     margin-right: 5px;
     color: black;
-    background-color: white;
 }
 
 nav li:hover{
-    color: black;
-    background-color: greenyellow;
+    color: white;
+    background-color: transparent;
+}
+
+.input {
+    margin: 30px;
+    background: none;
+    border: none;
+    outline: none;
+    max-width: 190px;
+    margin-top: 60px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 9999px;
+    box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+    color: white;
 }
 
 .cta{
@@ -45,23 +70,27 @@ nav li:hover{
     padding-top: 6px;
     margin-top: 70px;
     margin-left: 325px;
-    border: 2px solid greenyellow;
+    border: 2px solid black;
     border-radius: 5px;
     text-align: center;
     font-weight: bolder;
 }
 
 .cta:hover{
-    background-color: greenyellow;
     color: black;
-    border-color: black;
+    border-color: transparent;
+    text-decoration-line: underline;
 }
 
 header{
     height: 700px;
-    background-color: greenyellow;
+    background-image: url("/assets/Background.jpg");
     padding: 20px;
     text-align: center;
+    margin-top: -100px;
+    background-position: center;
+    background-size: cover;
+    color: white;
 }
 
 .head-text{
@@ -92,25 +121,25 @@ header{
   
 @keyframes colorChange1 {
     0% {
-      background-color: yellowgreen;
+      background-color: rgb(95, 18, 95);
     }
     50% {
-      background-color: skyblue;
+      background-color: rgb(57, 14, 120);
     }
     100% {
-      background-color: yellowgreen;
+      background-color: rgb(95, 18, 95);
     }
 }
   
 @keyframes colorChange2 {
     0% {
-      background-color: black;
+      background-color: rgb(62, 3, 94);
     }
     50% {
-      background-color: orange;
+      background-color: rgb(40, 20, 97);
     }
     100% {
-      background-color: black;
+      background-color: rgb(62, 3, 94);
     }
 }
 
@@ -133,7 +162,8 @@ h2{
   }
 
 body{
-    background-color: aqua;
+    background-color: purple;
+    color: white;
 }
 
 .image-block {
@@ -144,13 +174,13 @@ body{
 }
   
 .circle {
-    width: 450px;
-    height: 450px;
-    border-radius: 50%;
+    width: 500px;
+    height: 500px;
     margin: 0 auto;
     margin-top: 50px;
-    background-image: url("../assets/assets/hands.jpg");
-    background-position: center;
+    margin-left: 80px;
+    background-image: url("../assets/About.jpg");
+    background-position: bottom;
     background-size: cover;
 }
   
@@ -162,7 +192,7 @@ body{
     font-size: 24px;
     font-weight: bold;
     padding-left: 100px;
-    color: #333;
+    color: white;
     margin: 0;
 }
   
@@ -170,13 +200,13 @@ body{
     font-size: 20px;
     font-weight: bold;
     padding-left: 100px;
-    color: #333;
+    color: white;
     margin: 0;
 }
 
 .text {
     font-size: 16px;
-    color: #333;
+    color: white;
     margin-top: 10px;
     padding-left: 100px;
 }
@@ -229,13 +259,6 @@ h4{
 
 .noten h4{
     padding-bottom: 150px;
-}
-
-.container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 50px;
 }
   
 .col-6 {
@@ -337,8 +360,8 @@ h4{
 
 .small-btn:hover{
     border: 2px solid black;
-    background-color: black;
-    color: greenyellow;
+    background-color: transparent;
+    color: white;
     cursor: pointer;
     padding-top: 3px;
  }
@@ -346,8 +369,8 @@ h4{
 .small-btn{
     width: 150px;
     height: 35px;
-    background-color: greenyellow;
-    color: black;
+    background-color: black;
+    color: white;
     border-radius: 5px;
     padding-top: 5px;
     margin:  0 auto;
@@ -359,4 +382,138 @@ h4{
     padding-top: 25px;
     padding-left: 15%;
     padding-right: 15%;
+}
+
+footer{
+    width: 100%;
+    height: 400px;
+    background-color: purple;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    float: left;
+    margin-left: 45%;
+    margin-top: 100px;
+}
+  
+.up {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+}
+  
+.down {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+}
+  
+.card1 {
+    width: 90px;
+    height: 90px;
+    outline: none;
+    border: none;
+    background: white;
+    border-radius: 90px 5px 5px 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: .2s ease-in-out;
+}
+  
+.instagram {
+    margin-top: 1.5em;
+    margin-left: 1.2em;
+    fill: #cc39a4;
+}
+  
+.card2 {
+    width: 90px;
+    height: 90px;
+    outline: none;
+    border: none;
+    background: white;
+    border-radius: 5px 90px 5px 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: .2s ease-in-out;
+}
+  
+.twitter {
+    margin-top: 1.5em;
+    margin-left: -.9em;
+    fill: #03A9F4;
+}
+  
+.card3 {
+    width: 90px;
+    height: 90px;
+    outline: none;
+    border: none;
+    background: white;
+    border-radius: 5px 5px 5px 90px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: .2s ease-in-out;
+}
+  
+.github {
+    margin-top: -.6em;
+    margin-left: 1.2em;
+}
+  
+.card4 {
+    width: 90px;
+    height: 90px;
+    outline: none;
+    border: none;
+    background: white;
+    border-radius: 5px 5px 90px 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: .2s ease-in-out;
+}
+  
+.discord {
+    margin-top: -.9em;
+    margin-left: -1.2em;
+    fill: #8c9eff;
+}
+  
+.card1:hover {
+    cursor: pointer;
+    scale: 1.1;
+    background-color: #cc39a4;
+}
+  
+.card1:hover .instagram {
+    fill: white;
+}
+  
+.card2:hover {
+    cursor: pointer;
+    scale: 1.1;
+    background-color: #03A9F4;
+}
+  
+.card2:hover .twitter {
+    fill: white;
+}
+  
+.card3:hover {
+    cursor: pointer;
+    scale: 1.1;
+    background-color: black;
+}
+  
+.card3:hover .github {
+    fill: white;
+}
+  
+.card4:hover {
+    cursor: pointer;
+    scale: 1.1;
+    background-color: #8c9eff;
+}
+  
+.card4:hover .discord {
+    fill: white;
 }
