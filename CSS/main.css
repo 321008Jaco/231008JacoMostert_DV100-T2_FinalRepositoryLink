@@ -51,12 +51,12 @@ nav li:hover{
 }
 
 header{
-    height: 900px;
+    height: 700px;
     width: 100%;
-    background-image: url("../assets/3ibn.gif");
+    background-color: greenyellow;
     padding-left: 10px;
     padding-top: 150px;
-    color: white;
+    color: black;
     background-position: center;
     background-size: auto;
 }
