@@ -54,6 +54,10 @@ nav ul li a:hover {
     background-color: #eee;
 }
 
+body{
+    background-color: purple;
+}
+
 .input {
     margin: 30px;
     background: none;
@@ -67,3 +71,75 @@ nav ul li a:hover {
     box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
     color: white;
 }
+
+.tab-container {
+    display: flex;
+    justify-content: center;
+}
+  
+.tab {
+    flex: 1;
+    padding: 10px;
+    margin-top: 100px;
+    background-color: transparent;
+    border: none;
+    text-align: center;
+    justify-self: center;
+    cursor: pointer;
+}
+
+.tab:hover{
+    cursor: pointer;
+    text-decoration-line: underline;
+}
+  
+.tab.active {
+    background-color: transparent;
+    color: black;
+}
+  
+.tab-content {
+    display: none;
+    padding: 20px;
+}
+  
+.tab-content.active {
+    display: block;
+}
+
+.tab-content{
+    text-align: center;
+}
+
+form {
+    height: 1000px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  fieldset {
+    margin-bottom: 50px;
+  }
+  
+  legend {
+    font-weight: bold;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 50px;
+  }
+  
+  .checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 10px;
+  }
+  
+  .checkbox-group label {
+    flex-basis: 25%;
+  }
+  
+  input[type="submit"] {
+    margin-top: 10px;
+  }
