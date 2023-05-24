@@ -1,53 +1,48 @@
-nav{
-    width: 100%;
-    height: 80px;
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-top: 20px;
-    background-color: transparent;
-}
-
-.logo{
-    color: white;
-    margin-top: -110px;
-}
-
-.logo-photo{
-    height: 300px;
-    width: 300px;
-    background-image: url("/assets/Logo.PNG");
-    background-position: center;
-    background-size: cover;
-    margin-left: 42%;
-    margin-top: -13px;
-    border-radius: 50%;
-}
-
 .active{
-    color: white;
+    color: black;
     text-decoration-line: overline;
 }
-
-nav ul{
-    list-style: none;
+  
+.logo{
+    float: left;
+    color: blueviolet; 
 }
-
-nav li{
-    border-radius: 5px;
-    height: 35px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 5px;
+  
+.nav-con{
+    width: 520px;
+    height: 60px;
     float: right;
-    margin-left: 5px;
-    margin-top: -30px;
-    margin-right: 5px;
-    color: black;
+    text-align: center;
 }
-
-nav li:hover{
-    color: white;
-    background-color: transparent;
+  
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    color: #eee;
+}
+  
+nav ul li {
+    margin-right: 20px;
+}
+  
+nav ul li:last-child {
+    margin-right: 0;
+}
+  
+nav ul li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #000;
+}
+  
+nav ul li a:hover {
+    background-color: #eee;
 }
 
 .input {
@@ -63,31 +58,12 @@ nav li:hover{
     box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
     color: white;
 }
-
-.cta{
-    height: 40px;
-    width: 200px;
-    padding-top: 6px;
-    margin-top: 70px;
-    margin-left: 325px;
-    border: 2px solid black;
-    border-radius: 5px;
-    text-align: center;
-    font-weight: bolder;
-}
-
-.cta:hover{
-    color: black;
-    border-color: transparent;
-    text-decoration-line: underline;
-}
-
 header{
     height: 700px;
     background-image: url("/assets/Background.jpg");
     padding: 20px;
     text-align: center;
-    margin-top: -100px;
+    margin-top: -135px;
     background-position: center;
     background-size: cover;
     color: white;
@@ -105,7 +81,7 @@ header{
     background-color: yellowgreen;
     border-radius: 50% 0 0 50%;
     margin-left: 1250px;
-    margin-top: -670px;
+    margin-top: -660px;
     animation: colorChange1 3s infinite;
 }
   
@@ -115,7 +91,7 @@ header{
     background-color: black;
     border-radius: 50% 0 0 50%;
     margin-left: 1150px;
-    margin-top: -410px;
+    margin-top: -345px;
     animation: colorChange2 5s infinite;
 }
   
@@ -162,8 +138,10 @@ h2{
   }
 
 body{
-    background-color: purple;
+    background-image: url("/assets/BodyBackground.jpg");
     color: white;
+    background-position: center;
+    background-size: cover;
 }
 
 .image-block {
@@ -387,7 +365,7 @@ h4{
 footer{
     width: 100%;
     height: 400px;
-    background-color: purple;
+    background-color: transparent;
 }
 
 .main {
@@ -516,4 +494,9 @@ footer{
   
 .card4:hover .discord {
     fill: white;
+}
+
+.info{
+text-align: right;
+margin-right: 50px;
 }
