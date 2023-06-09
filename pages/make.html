@@ -13,7 +13,7 @@
              <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
          
              <link rel="stylesheet" href="../CSS/make.css">
-             <script src="/JS/script.js"></script>
+             <script src="/JS/make.js"></script>
 
 </head>
 <body>
@@ -25,15 +25,13 @@
         <div class="nav-con">
 
             <ul>
-                <a href="/index.html"><li class=active>Page One</li></a>
-                <a href="/pages/make.html"><li>Page Two</li></a>
-                <a href="#"><li>Page Three</li></a>
+                <a href="/index.html"><li class=active>Home</li></a>
+                <a href="/pages/make.html"><li>Make your SUB</li></a>
+                <a href="/pages/SubsOfTheMonth.html"><li>Page Three</li></a>
                 <a href="#"><li>Page Four</li></a>
             </ul>
 
         </div>
-
-        <input placeholder="Search" class="input" name="text" type="text">
         
     </nav>
 
@@ -41,224 +39,253 @@
 
     </header>
 
-    <div class="tab-container">
-        <div class="tab active" onclick="changeTab(0)">Single</div>
-        <div class="tab" onclick="changeTab(1)">2 Times</div>
-        <div class="tab" onclick="changeTab(2)">Chest Hair sandwich</div>
-        <div class="tab" onclick="changeTab(3)">Wow! You are Hungry</div>
+    <div class="form-container">
+
+
+      <div class="con-form">
+        
+        <div class="tab-container">
+          <div class="tab active" onclick="changeTab(0)">Single</div>
+          <div class="tab" onclick="changeTab(1)">2 Times</div>
+          <div class="tab" onclick="changeTab(2)">Chest Hair sandwich</div>
+          <div class="tab" onclick="changeTab(3)">Wow! You are Hungry</div>
+        </div>
+  
+                <form>
+  
+            
+                    <div class="tab-content">
+                      <b>Single</b>
+  
+                      <label for="pizza-name">Pizza Name:</label>
+                      <input type="text" id="pizza-name" name="pizza-name" required><br><br>
+              
+                      <label for="size">Size:</label>
+                      <select id="size" name="size">
+                      <option value="small">Small</option>
+                      <option value="medium">Medium</option>
+                      <option value="large">Large</option>
+                      <option value="extra-large">Extra Large</option>
+                    </select>
+                          
+                    <fieldset>
+                      <legend>Bread:</legend>
+                      <label><input type="radio" name="bread" value="white">White</label>
+                      <label><input type="radio" name="bread" value="wheat">Brown</label>
+                    </fieldset>
+                          
+                    <fieldset>
+                    <legend>Toppings:</legend>
+                    <div class="checkbox-group">
+                      <label><input type="checkbox" name="topping" value="cheese">Cheese</label>
+                      <label><input type="checkbox" name="topping" value="lettuce">Lettuce</label>
+                      <label><input type="checkbox" name="topping" value="tomato">Tomato</label>
+                      <label><input type="checkbox" name="topping" value="onion">Onion</label>
+                      <label><input type="checkbox" name="topping" value="pickles">Pickles</label>
+                      <label><input type="checkbox" name="topping" value="bacon">Bacon</label>
+                      <label><input type="checkbox" name="topping" value="olives">Olives</label>
+                      <label><input type="checkbox" name="topping" value="mushrooms">Feta</label>
+              
+                     </div>
+                    </fieldset>
+        
+                    <fieldset>
+                      <legend>Sauces:</legend>
+                      <div class="checkbox-group">
+                        <label><input type="checkbox" name="sauce" value="mayo">Mayo</label>
+                        <label><input type="checkbox" name="sauce" value="mustard">Mustard</label>
+                        <label><input type="checkbox" name="sauce" value="ketchup">Ketchup</label>
+                        <label><input type="checkbox" name="sauce" value="ranch">Ranch</label>
+                        <label><input type="checkbox" name="sauce" value="bbq">BBQ</label>
+                        <label><input type="checkbox" name="sauce" value="hot-sauce">Hot Sauce</label>
+                        <label><input type="checkbox" name="sauce" value="honey-mustard">Honey Mustard</label>
+                        <label><input type="checkbox" name="sauce" value="thousand-island">Thousand Island</label>
+        
+                      </div>
+                    </fieldset>
+        
+                    <button type="submit">Submit</button>  
+  
+            </div>
+            </form>
+          
+  
+              <div class="tab-content" style="margin-top: -1000px;">
+                <b>2 Times</b>
+  
+                <label for="pizza-name">Pizza Name:</label>
+                <input type="text" id="pizza-name" name="pizza-name" required><br><br>
+        
+                <label for="size">Size:</label>
+                <select id="size" name="size">
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+                <option value="extra-large">Extra Large</option>
+              </select>
+                    
+              <fieldset>
+                <legend>Bread:</legend>
+                <label><input type="radio" name="bread" value="white">White</label>
+                <label><input type="radio" name="bread" value="wheat">Brown</label>
+              </fieldset>
+                    
+              <fieldset>
+              <legend>Toppings:</legend>
+              <div class="checkbox-group">
+                <label><input type="checkbox" name="topping" value="cheese">Cheese</label>
+                <label><input type="checkbox" name="topping" value="lettuce">Lettuce</label>
+                <label><input type="checkbox" name="topping" value="tomato">Tomato</label>
+                <label><input type="checkbox" name="topping" value="onion">Onion</label>
+                <label><input type="checkbox" name="topping" value="pickles">Pickles</label>
+                <label><input type="checkbox" name="topping" value="bacon">Bacon</label>
+                <label><input type="checkbox" name="topping" value="olives">Olives</label>
+                <label><input type="checkbox" name="topping" value="mushrooms">Feta</label>
+        
+               </div>
+              </fieldset>
+  
+              <fieldset>
+                <legend>Sauces:</legend>
+                <div class="checkbox-group">
+                  <label><input type="checkbox" name="sauce" value="mayo">Mayo</label>
+                  <label><input type="checkbox" name="sauce" value="mustard">Mustard</label>
+                  <label><input type="checkbox" name="sauce" value="ketchup">Ketchup</label>
+                  <label><input type="checkbox" name="sauce" value="ranch">Ranch</label>
+                  <label><input type="checkbox" name="sauce" value="bbq">BBQ</label>
+                  <label><input type="checkbox" name="sauce" value="hot-sauce">Hot Sauce</label>
+                  <label><input type="checkbox" name="sauce" value="honey-mustard">Honey Mustard</label>
+                  <label><input type="checkbox" name="sauce" value="thousand-island">Thousand Island</label>
+  
+                </div>
+              </fieldset>
+  
+              <button type="submit">Submit</button> 
+              </div>
+  
+        <div class="tab-content" style="margin-top: -1000px;">
+          <b>Chest Hair Sandwich</b>
+  
+          <label for="pizza-name">Pizza Name:</label>
+          <input type="text" id="pizza-name" name="pizza-name" required><br><br>
+  
+          <label for="size">Size:</label>
+          <select id="size" name="size">
+          <option value="small">Small</option>
+          <option value="medium">Medium</option>
+          <option value="large">Large</option>
+          <option value="extra-large">Extra Large</option>
+        </select>
+              
+        <fieldset>
+          <legend>Bread:</legend>
+          <label><input type="radio" name="bread" value="white">White</label>
+          <label><input type="radio" name="bread" value="wheat">Brown</label>
+        </fieldset>
+              
+        <fieldset>
+        <legend>Toppings:</legend>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="topping" value="cheese">Cheese</label>
+          <label><input type="checkbox" name="topping" value="lettuce">Lettuce</label>
+          <label><input type="checkbox" name="topping" value="tomato">Tomato</label>
+          <label><input type="checkbox" name="topping" value="onion">Onion</label>
+          <label><input type="checkbox" name="topping" value="pickles">Pickles</label>
+          <label><input type="checkbox" name="topping" value="bacon">Bacon</label>
+          <label><input type="checkbox" name="topping" value="olives">Olives</label>
+          <label><input type="checkbox" name="topping" value="mushrooms">Feta</label>
+  
+         </div>
+        </fieldset>
+  
+        <fieldset>
+          <legend>Sauces:</legend>
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="sauce" value="mayo">Mayo</label>
+            <label><input type="checkbox" name="sauce" value="mustard">Mustard</label>
+            <label><input type="checkbox" name="sauce" value="ketchup">Ketchup</label>
+            <label><input type="checkbox" name="sauce" value="ranch">Ranch</label>
+            <label><input type="checkbox" name="sauce" value="bbq">BBQ</label>
+            <label><input type="checkbox" name="sauce" value="hot-sauce">Hot Sauce</label>
+            <label><input type="checkbox" name="sauce" value="honey-mustard">Honey Mustard</label>
+            <label><input type="checkbox" name="sauce" value="thousand-island">Thousand Island</label>
+  
+          </div>
+        </fieldset>
+  
+        <button type="submit">Submit</button> 
+  
       </div>
-      
-      <div class="tab-content active">
-        <b>Single</b>
+  
+        <div class="tab-content" style="margin-top: -1000px;">
+          <b>Wow! You Are Hungry</b>
+  
+          <label for="pizza-name">Pizza Name:</label>
+          <input type="text" id="pizza-name" name="pizza-name" required><br><br>
+  
+          <label for="size">Size:</label>
+          <select id="size" name="size">
+          <option value="small">Small</option>
+          <option value="medium">Medium</option>
+          <option value="large">Large</option>
+          <option value="extra-large">Extra Large</option>
+        </select>
+              
+        <fieldset>
+          <legend>Bread:</legend>
+          <label><input type="radio" name="bread" value="white">White</label>
+          <label><input type="radio" name="bread" value="wheat">Brown</label>
+        </fieldset>
+              
+        <fieldset>
+        <legend>Toppings:</legend>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="topping" value="cheese">Cheese</label>
+          <label><input type="checkbox" name="topping" value="lettuce">Lettuce</label>
+          <label><input type="checkbox" name="topping" value="tomato">Tomato</label>
+          <label><input type="checkbox" name="topping" value="onion">Onion</label>
+          <label><input type="checkbox" name="topping" value="pickles">Pickles</label>
+          <label><input type="checkbox" name="topping" value="bacon">Bacon</label>
+          <label><input type="checkbox" name="topping" value="olives">Olives</label>
+          <label><input type="checkbox" name="topping" value="mushrooms">Feta</label>
+  
+         </div>
+        </fieldset>
+  
+        <fieldset>
+          <legend>Sauces:</legend>
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="sauce" value="mayo">Mayo</label>
+            <label><input type="checkbox" name="sauce" value="mustard">Mustard</label>
+            <label><input type="checkbox" name="sauce" value="ketchup">Ketchup</label>
+            <label><input type="checkbox" name="sauce" value="ranch">Ranch</label>
+            <label><input type="checkbox" name="sauce" value="bbq">BBQ</label>
+            <label><input type="checkbox" name="sauce" value="hot-sauce">Hot Sauce</label>
+            <label><input type="checkbox" name="sauce" value="honey-mustard">Honey Mustard</label>
+            <label><input type="checkbox" name="sauce" value="thousand-island">Thousand Island</label>
+  
+          </div>
+        </fieldset>
+  
+        <button type="submit">Submit</button> 
+  
+      </div>
 
-        <form>
-            <label for="size">Size:</label>
-            <select id="size" name="size">
-              <option value="small">Small</option>
-              <option value="medium">Medium</option>
-              <option value="large">Large</option>
-              <option value="extra-large">Extra Large</option>
-            </select>
-            
-            <fieldset>
-              <legend>Bread:</legend>
-              <label><input type="radio" name="bread" value="white">White</label>
-              <label><input type="radio" name="bread" value="wheat">Brown</label>
-            </fieldset>
-            
-            <fieldset>
-              <legend>Toppings:</legend>
-              <div class="checkbox-group">
-                <label><input type="checkbox" name="topping" value="cheese">Cheese</label>
-                <label><input type="checkbox" name="topping" value="lettuce">Lettuce</label>
-                <label><input type="checkbox" name="topping" value="tomato">Tomato</label>
-                <label><input type="checkbox" name="topping" value="onion">Onion</label>
-                <label><input type="checkbox" name="topping" value="pickles">Pickles</label>
-                <label><input type="checkbox" name="topping" value="bacon">Bacon</label>
-                <label><input type="checkbox" name="topping" value="olives">Olives</label>
-                <label><input type="checkbox" name="topping" value="mushrooms">Mushrooms</label>
-                <!-- Add more checkboxes for toppings as needed -->
-              </div>
-            </fieldset>
-            
-            <fieldset>
-              <legend>Sauces:</legend>
-              <div class="checkbox-group">
-                <label><input type="checkbox" name="sauce" value="mayo">Mayo</label>
-                <label><input type="checkbox" name="sauce" value="mustard">Mustard</label>
-                <label><input type="checkbox" name="sauce" value="ketchup">Ketchup</label>
-                <label><input type="checkbox" name="sauce" value="ranch">Ranch</label>
-                <label><input type="checkbox" name="sauce" value="bbq">BBQ</label>
-                <label><input type="checkbox" name="sauce" value="hot-sauce">Hot Sauce</label>
-                <label><input type="checkbox" name="sauce" value="honey-mustard">Honey Mustard</label>
-                <label><input type="checkbox" name="sauce" value="thousand-island">Thousand Island</label>
-                <!-- Add more checkboxes for sauces as needed -->
-              </div>
-            </fieldset>
-            
-            <button type="submit">Submit</button>
-          </form>
+      </div>
 
-    </div>
+      <div class="right-con">
 
-      <div class="tab-content">
-        <b>2 Times</b>
+        <div id="current-order">
+          <h3>Current Order</h3>
+          <div id="order-details"></div>
+        </div>
 
-        <form>
-            <label for="size">Size:</label>
-            <select id="size" name="size">
-              <option value="small">Small</option>
-              <option value="medium">Medium</option>
-              <option value="large">Large</option>
-              <option value="extra-large">Extra Large</option>
-            </select>
-            
-            <fieldset>
-              <legend>Bread:</legend>
-              <label><input type="radio" name="bread" value="white">White</label>
-              <label><input type="radio" name="bread" value="wheat">Brown</label>
-            </fieldset>
-            
-            <fieldset>
-              <legend>Toppings:</legend>
-              <div class="checkbox-group">
-                <label><input type="checkbox" name="topping" value="cheese">Cheese</label>
-                <label><input type="checkbox" name="topping" value="lettuce">Lettuce</label>
-                <label><input type="checkbox" name="topping" value="tomato">Tomato</label>
-                <label><input type="checkbox" name="topping" value="onion">Onion</label>
-                <label><input type="checkbox" name="topping" value="pickles">Pickles</label>
-                <label><input type="checkbox" name="topping" value="bacon">Bacon</label>
-                <label><input type="checkbox" name="topping" value="olives">Olives</label>
-                <label><input type="checkbox" name="topping" value="mushrooms">Mushrooms</label>
-                <!-- Add more checkboxes for toppings as needed -->
-              </div>
-            </fieldset>
-            
-            <fieldset>
-              <legend>Sauces:</legend>
-              <div class="checkbox-group">
-                <label><input type="checkbox" name="sauce" value="mayo">Mayo</label>
-                <label><input type="checkbox" name="sauce" value="mustard">Mustard</label>
-                <label><input type="checkbox" name="sauce" value="ketchup">Ketchup</label>
-                <label><input type="checkbox" name="sauce" value="ranch">Ranch</label>
-                <label><input type="checkbox" name="sauce" value="bbq">BBQ</label>
-                <label><input type="checkbox" name="sauce" value="hot-sauce">Hot Sauce</label>
-                <label><input type="checkbox" name="sauce" value="honey-mustard">Honey Mustard</label>
-                <label><input type="checkbox" name="sauce" value="thousand-island">Thousand Island</label>
-                <!-- Add more checkboxes for sauces as needed -->
-              </div>
-            </fieldset>
-            
-            <button type="submit">Submit</button>
-          </form>
+      </div>
 
     </div>
 
-      <div class="tab-content">
-        <b>Chest Hair sandwich</b>
 
-        <form>
-            <label for="size">Size:</label>
-            <select id="size" name="size">
-              <option value="small">Small</option>
-              <option value="medium">Medium</option>
-              <option value="large">Large</option>
-              <option value="extra-large">Extra Large</option>
-            </select>
-            
-            <fieldset>
-              <legend>Bread:</legend>
-              <label><input type="radio" name="bread" value="white">White</label>
-              <label><input type="radio" name="bread" value="wheat">Brown</label>
-            </fieldset>
-            
-            <fieldset>
-              <legend>Toppings:</legend>
-              <div class="checkbox-group">
-                <label><input type="checkbox" name="topping" value="cheese">Cheese</label>
-                <label><input type="checkbox" name="topping" value="lettuce">Lettuce</label>
-                <label><input type="checkbox" name="topping" value="tomato">Tomato</label>
-                <label><input type="checkbox" name="topping" value="onion">Onion</label>
-                <label><input type="checkbox" name="topping" value="pickles">Pickles</label>
-                <label><input type="checkbox" name="topping" value="bacon">Bacon</label>
-                <label><input type="checkbox" name="topping" value="olives">Olives</label>
-                <label><input type="checkbox" name="topping" value="mushrooms">Mushrooms</label>
-                <!-- Add more checkboxes for toppings as needed -->
-              </div>
-            </fieldset>
-            
-            <fieldset>
-              <legend>Sauces:</legend>
-              <div class="checkbox-group">
-                <label><input type="checkbox" name="sauce" value="mayo">Mayo</label>
-                <label><input type="checkbox" name="sauce" value="mustard">Mustard</label>
-                <label><input type="checkbox" name="sauce" value="ketchup">Ketchup</label>
-                <label><input type="checkbox" name="sauce" value="ranch">Ranch</label>
-                <label><input type="checkbox" name="sauce" value="bbq">BBQ</label>
-                <label><input type="checkbox" name="sauce" value="hot-sauce">Hot Sauce</label>
-                <label><input type="checkbox" name="sauce" value="honey-mustard">Honey Mustard</label>
-                <label><input type="checkbox" name="sauce" value="thousand-island">Thousand Island</label>
-                <!-- Add more checkboxes for sauces as needed -->
-              </div>
-            </fieldset>
-            
-            <button type="submit">Submit</button>
-          </form>
 
-    </div>
-
-      <div class="tab-content">
-        <b>Wow! You are Hungry</b>
-
-        <form>
-            <label for="size">Size:</label>
-            <select id="size" name="size">
-              <option value="small">Small</option>
-              <option value="medium">Medium</option>
-              <option value="large">Large</option>
-              <option value="extra-large">Extra Large</option>
-            </select>
-            
-            <fieldset>
-              <legend>Bread:</legend>
-              <label><input type="radio" name="bread" value="white">White</label>
-              <label><input type="radio" name="bread" value="wheat">Brown</label>
-            </fieldset>
-            
-            <fieldset>
-              <legend>Toppings:</legend>
-              <div class="checkbox-group">
-                <label><input type="checkbox" name="topping" value="cheese">Cheese</label>
-                <label><input type="checkbox" name="topping" value="lettuce">Lettuce</label>
-                <label><input type="checkbox" name="topping" value="tomato">Tomato</label>
-                <label><input type="checkbox" name="topping" value="onion">Onion</label>
-                <label><input type="checkbox" name="topping" value="pickles">Pickles</label>
-                <label><input type="checkbox" name="topping" value="bacon">Bacon</label>
-                <label><input type="checkbox" name="topping" value="olives">Olives</label>
-                <label><input type="checkbox" name="topping" value="mushrooms">Mushrooms</label>
-                <!-- Add more checkboxes for toppings as needed -->
-              </div>
-            </fieldset>
-            
-            <fieldset>
-              <legend>Sauces:</legend>
-              <div class="checkbox-group">
-                <label><input type="checkbox" name="sauce" value="mayo">Mayo</label>
-                <label><input type="checkbox" name="sauce" value="mustard">Mustard</label>
-                <label><input type="checkbox" name="sauce" value="ketchup">Ketchup</label>
-                <label><input type="checkbox" name="sauce" value="ranch">Ranch</label>
-                <label><input type="checkbox" name="sauce" value="bbq">BBQ</label>
-                <label><input type="checkbox" name="sauce" value="hot-sauce">Hot Sauce</label>
-                <label><input type="checkbox" name="sauce" value="honey-mustard">Honey Mustard</label>
-                <label><input type="checkbox" name="sauce" value="thousand-island">Thousand Island</label>
-                <!-- Add more checkboxes for sauces as needed -->
-              </div>
-            </fieldset>
-            
-            <button type="submit">Submit</button>
-          </form>
-
-    </div>
 
 </body>
 </html>

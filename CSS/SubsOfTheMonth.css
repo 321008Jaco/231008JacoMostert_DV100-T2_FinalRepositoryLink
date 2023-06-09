@@ -1,0 +1,99 @@
+.active{
+    color: black;
+    text-decoration-line: overline;
+}
+  
+.logo{
+    float: left;
+    color: blueviolet; 
+}
+  
+.nav-con{
+    width: 520px;
+    height: 60px;
+    float: right;
+    text-align: center;
+}
+
+nav{
+    width: 100%;
+    height: 50px;
+    padding-left: 0%;
+    padding-right: 0%;
+    padding-top: 0px;
+    background-color: rgb(27, 2, 44); 
+}
+  
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    color: black;
+}
+  
+nav ul li {
+    margin-right: 20px;
+}
+  
+nav ul li:last-child {
+    margin-right: 0;
+}
+  
+nav ul li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #000;
+}
+  
+nav ul li a:hover {
+    background-color: #eee;
+}
+
+header {
+    height: 300px;
+}
+
+.carousel-wrapper {
+    width: 70%;
+    height: 300px;
+    margin: 0 auto;
+  }
+  
+  .carousel-wrapper .carousel-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .carousel-wrapper .carousel-caption h3,
+  .carousel-wrapper .carousel-caption p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .carousel-wrapper .carousel-indicators {
+    bottom: -30px;
+  }
+  
+  .carousel-wrapper .carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .carousel-wrapper .carousel-indicators .active {
+    background-color: #fff;
+  }
+
