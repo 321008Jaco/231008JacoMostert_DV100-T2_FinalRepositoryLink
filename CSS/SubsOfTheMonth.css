@@ -1,67 +1,91 @@
-.active{
-    color: black;
-    text-decoration-line: overline;
-}
-  
-.logo{
-    float: left;
-    color: blueviolet; 
-}
-  
-.nav-con{
-    width: 520px;
-    height: 60px;
-    float: right;
-    text-align: center;
+nav{
+  width: 100%;
+  height: 50px;
+  padding-left: 0%;
+  padding-right: 0%;
+  padding-top: 0px;
+  background-color: black; 
+
 }
 
-nav{
-    width: 100%;
-    height: 50px;
-    padding-left: 0%;
-    padding-right: 0%;
-    padding-top: 0px;
-    background-color: rgb(27, 2, 44); 
+.logo{
+  color: white;
+  display: flex;
 }
-  
+
+.container-fluid{
+  color: white;
+}
+
+.active{
+  text-decoration-line: overline;
+}
+
+.nav-con{
+  width: 520px;
+  height: 60px;
+  float: right;
+  text-align: center;
+}
+
 nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    color: black;
+  list-style: none;
+  margin: 0;
+  margin-top: -30px;
+  margin-right: 100px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #eee;
 }
-  
+
 nav ul li {
-    margin-right: 20px;
+  height: 30px;
+  width: 150px;
 }
-  
+
 nav ul li:last-child {
-    margin-right: 0;
+  margin-right: 0;
 }
-  
+
 nav ul li a {
-    display: block;
-    padding: 10px;
-    text-decoration: none;
-    color: #000;
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #000;
 }
-  
+
 nav ul li a:hover {
-    background-color: #eee;
+  background-color: #eee;
 }
 
 header {
     height: 300px;
 }
 
+body{
+  background-image: url("/assets/hanny-naibaho-6JUjdlHyqw0-unsplash.jpg");
+  background-position: left;
+  background-size: cover;
+}
+
+h3{
+  text-align: center;
+  margin-left: 500px;
+}
+
+h1{
+  text-align: center;
+}
+
 .carousel-wrapper {
     width: 70%;
     height: 300px;
     margin: 0 auto;
+    margin-top: -200px;
+    scale: 0.4;
   }
   
   .carousel-wrapper .carousel-caption {

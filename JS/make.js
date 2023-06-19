@@ -1,95 +1,91 @@
-function changeTab(index) {
-  var tabs = document.getElementsByClassName('tab');
-  var tabContents = document.getElementsByClassName('tab-content');
-
-  for (var i = 0; i < tabs.length; i++) {
-    tabs[i].classList.remove('active');
-    tabContents[i].classList.remove('active');
-  }
-
-  tabs[index].classList.add('active');
-  tabContents[index].classList.add('active');
-}
-
-var tabs = document.getElementsByClassName('tab');
-for (var i = 0; i < tabs.length; i++) {
-  tabs[i].addEventListener('click', function(e) {
-    var index = Array.from(tabs).indexOf(e.target);
-    changeTab(index);
-  });
-}
-
-const tabContents = document.querySelectorAll(".tab-content");
-
-tabContents.forEach(tabContent => {
-  const form = tabContent.querySelector("form");
-
-  form.addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    const formData = new FormData(form);
-    const formObject = Object.fromEntries(formData.entries());
-
-    const currentOrderBox = document.getElementById("current-order");
-    currentOrderBox.innerHTML = `
-      <h3>Current Order</h3>
-      <p>Size: ${formObject.size}</p>
-      <p>Bread: ${formObject.bread}</p>
-      <p>Toppings: ${formObject.topping}</p>
-      <p>Sauces: ${formObject.sauce}</p>
-    `;
-  });
-});
-
 document.addEventListener('DOMContentLoaded', function() {
-  const form = document.querySelector('form');
+  const form = document.getElementById('sub-form');
+  const cardContainer = document.getElementById('card-container');
+  const totalPriceElement = document.getElementById('total-price');
 
-  form.addEventListener('submit', function(e) {
-    e.preventDefault();
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
 
-    const pizzaName = document.querySelector('#pizza-name').value;
-    const size = document.querySelector('#size').value;
+    const subName = document.getElementById('sub-name').value;
+    const sizeSelect = document.getElementById('size');
+    const sizeOption = sizeSelect.options[sizeSelect.selectedIndex];
+    const size = sizeOption.value;
+    const price = parseFloat(sizeOption.getAttribute('data-price').replace(',', '.')) || 0;
     const bread = document.querySelector('input[name="bread"]:checked').value;
+    const toppings = Array.from(document.querySelectorAll('input[name="topping"]:checked')).map(function(checkbox) {
+      return checkbox.value;
+    });
+    const sauces = Array.from(document.querySelectorAll('input[name="sauce"]:checked')).map(function(checkbox) {
+      return checkbox.value;
+    });
 
-    const toppingsCheckboxes = document.querySelectorAll('input[name="topping"]:checked');
-    const toppings = Array.from(toppingsCheckboxes).map(checkbox => checkbox.value);
+    createCard(subName, size, bread, toppings, sauces, price);
 
-    const saucesCheckboxes = document.querySelectorAll('input[name="sauce"]:checked');
-    const sauces = Array.from(saucesCheckboxes).map(checkbox => checkbox.value);
+    const totalPrice = getTotalPrice();
+    totalPriceElement.textContent = `R${totalPrice.toFixed(2)}`;
 
-    const pizzaOrder = {
-      "Pizza Name": pizzaName,
-      "Size": size,
-      "Bread": bread,
-      "Toppings": toppings,
-      "Sauces": sauces
-    };
-
-    console.log(pizzaOrder);
+    saveDataToLocalStorage(subName, size, bread, toppings, sauces, price);
 
     form.reset();
   });
-});
 
-document.addEventListener('DOMContentLoaded', function() {
-  const form = document.querySelector('form');
-  const orderDetails = document.getElementById('order-details');
-
-  form.addEventListener('submit', function(e) {
-    e.preventDefault();
-
-    const formData = new FormData(form);
-    const formObject = Object.fromEntries(formData.entries());
-
-    const orderHTML = `
-      <p><strong>Pizza Name:</strong> ${formObject['pizza-name']}</p>
-      <p><strong>Size:</strong> ${formObject['size']}</p>
-      <p><strong>Bread:</strong> ${formObject['bread']}</p>
-      <p><strong>Toppings:</strong> ${formObject['topping']}</p>
-      <p><strong>Sauces:</strong> ${formObject['sauce']}</p>
+  function createCard(subName, size, bread, toppings, sauces, price) {
+    // Create card HTML
+    const cardHTML = `
+      <div class="card">
+        <h4>${subName}</h4>
+        <p>Size: ${size}</p>
+        <p>Bread: ${bread}</p>
+        <p>Toppings: ${toppings.join(', ')}</p>
+        <p>Sauces: ${sauces.join(', ')}</p>
+        <p>Price: R${price.toFixed(2)}</p>
+      </div>
     `;
 
-    orderDetails.innerHTML = orderHTML;
+    // Append card to the container
+    cardContainer.insertAdjacentHTML('beforeend', cardHTML);
+  }
 
-  });
+  function getTotalPrice() {
+    const cards = document.querySelectorAll('.card');
+    let totalPrice = 0;
+
+    cards.forEach(function(card) {
+      const priceText = card.querySelector('p:last-child').textContent;
+      const price = parseFloat(priceText.split('R')[1]);
+
+      totalPrice += price;
+    });
+
+    return totalPrice;
+  }
+
+  function saveDataToLocalStorage(subName, size, bread, toppings, sauces, price) {
+    const subData = {
+      subName: subName,
+      size: size,
+      bread: bread,
+      toppings: toppings,
+      sauces: sauces,
+      price: price
+    };
+
+    let existingData = JSON.parse(localStorage.getItem('subs')) || [];
+    existingData.push(subData);
+
+    localStorage.setItem('subs', JSON.stringify(existingData));
+  }
+
+  function displayExistingCards() {
+    const existingData = JSON.parse(localStorage.getItem('subs')) || [];
+
+    existingData.forEach(function(data) {
+      createCard(data.subName, data.size, data.bread, data.toppings, data.sauces, data.price);
+    });
+
+    const totalPrice = getTotalPrice();
+    totalPriceElement.textContent = `R${totalPrice.toFixed(2)}`;
+  }
+
+  displayExistingCards();
 });
